@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改课程</title>
+
+    <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../wangEditor-3.1.1/release/wangEditor.min.js"></script>
+    <script src="../vue/vue.min.js"></script>
+    <link href="../css/Arrange.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="col-md-10">
+        <h2>课程信息</h2>
+        <hr class="divider">
+        <div id="panel-group">
+
+            <!-- 1 -->
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">课程信息</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="alert alert-info" role="alert">
+                        <!-- strong用于加粗文字 -->
+                        <strong>课程名称：</strong>
+                        <input id="courseName">
+
+                    </div>
+                    <div class="alert alert-warning" role="alert">
+                        <strong>课程详情：</strong>
+                        <input id="courseDetails">
+                    </div>
+                    <div class="alert alert-warning" role="alert">
+                        <strong>老师：</strong>
+                        <input id="teacher">
+                    </div>
+                    <div>
+                        <input type="button" value="确认修改" id="editSubmit">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+<script src="../js/editCourse.js"></script>
+</html>

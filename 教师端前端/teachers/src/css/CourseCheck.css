@@ -1,0 +1,13 @@
+span{
+    font-family: 微软雅黑;
+    font-size: x-large;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.container{
+    text-align: center;
+    margin: 0 auto;
+}
+.row{
+    margin-top: 20px;
+}

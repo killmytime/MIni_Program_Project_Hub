@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../vue/vue.min.js"></script>
+    <link href="../css/UploadCourse.css" rel="stylesheet">
+
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+    <!--container-fluid表示自适应大小，container表示居中-->
+    <div class="container">
+        <!--定义顶部导航栏-->
+        <div class="navbar-header">
+            <!--button是当屏幕小于多少时出现的可以打开导航列表的按钮-->
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target="#demo-navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">发布课程</a>
+        </div>
+
+        <!--collapse用于导航栏折叠之后数据在button按钮里点击显示-->
+        <div class="collapse navbar-collapse" id="demo-navbar">
+            <!--nav navbar-nav表示显示在导航栏里-->
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">首页</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">功能<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <!--通过dropdown-header来标记一组动作-->
+                        <li class="dropdown-header">信息</li>
+                        <li><a href="#">上传课程</a></li>
+                        <li><a href="InfoDetails.html">查看课程</a></li>
+
+                    </ul>
+                </li>
+
+                <!--input必须得实现form-control才有样式效果-->
+                <li><a id="username"></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+            <div class="text-center" id="left-content">
+                <div class="list-group">
+                    <li class="list-group-item" style="font-family: 幼圆">课程名：</li>
+                    <input id="course" type="text" width="40" style="text-align: center">
+                </div>
+                <div class="list-group">
+                    <li class="list-group-item" style="font-family: 幼圆">老师：</li>
+                    <input id="teacher" type="text" width="40" style="text-align: center">
+                </div>
+                <div class="list-group">
+                    <li class="list-group-item" style="font-family: 幼圆">课程描述：</li>
+                    <input id="courseDetails" type="text" width="40" style="text-align: center">
+                </div>
+                <div class="list-group">
+                    <li class="list-group-item" style="font-family: 幼圆">上传封面：</li>
+                    <input id="courseCover" type="file">
+                </div>
+                <div class="list-group">
+                    <a class="list-group-item" id="createCourse">上传课程</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-10">
+            <h2>发布课程</h2>
+            <hr class="divider">
+            <div id="panel-group">
+
+                <!-- 1 -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">课程完善</h3>
+                    </div>
+                    <div>
+                        <p>课程ID：<input type="number" id="courseId"></p>
+                    </div>
+                    <div class="panel-body" id="chapterDef">
+                        <div class="alert alert-info" role="alert">
+                            <!-- strong用于加粗文字 -->
+                            <strong>第</strong>
+                            <input type="number" id="chapterBox">
+                            <strong>章节；</strong>
+                            <strong>第</strong>
+                            <input type="number" id="smallChapterBox">
+                            <strong>小节</strong>
+                        </div>
+                        <div class="alert alert-info" role="alert">
+                            <!-- strong用于加粗文字 -->
+                            <strong>章节名称：</strong>
+                            <input type="text" id="chapterName">
+                            <strong>小节名称：</strong>
+                            <input type="text" id="smallChapterName">
+                            <button id="submit">确定并开始编排</button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+<script src="../js/UploadCourse.js"></script>
+</html>

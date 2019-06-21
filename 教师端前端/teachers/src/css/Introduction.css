@@ -1,0 +1,36 @@
+body{
+    text-align: center;
+}
+input{
+    background-color: lightgray !important;
+    border: lightgray solid 1px !important;
+}
+
+#mainC{
+    width: 600px;
+    height: 500px;
+    border: skyblue solid 1px;
+    background-color: lightgray;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#left-sign{
+    float: left;
+    height: 800px;
+}
+
+#right-sign{
+    float: right;
+    height: 800px;
+}
+
+#logo{
+    text-align: center;
+    padding-top: 50px;
+}
+
+#logo-right{
+    text-align: center;
+    padding-top: 50px;
+}

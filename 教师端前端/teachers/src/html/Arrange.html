@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内容编排</title>
+
+    <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../wangEditor-3.1.1/release/wangEditor.min.js"></script>
+    <script src="../vue/vue.min.js"></script>
+    <link href="../css/Arrange.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+    <!--container-fluid表示自适应大小，container表示居中-->
+    <div class="container">
+        <!--定义顶部导航栏-->
+        <div class="navbar-header">
+            <!--button是当屏幕小于多少时出现的可以打开导航列表的按钮-->
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target="#demo-navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">内容编排</a>
+        </div>
+
+        <!--collapse用于导航栏折叠之后数据在button按钮里点击显示-->
+        <div class="collapse navbar-collapse" id="demo-navbar">
+            <!--nav navbar-nav表示显示在导航栏里-->
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">首页</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">功能<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <!--通过dropdown-header来标记一组动作-->
+                        <li class="dropdown-header">信息</li>
+                        <li><a href="UploadCourse.html">上传课程</a></li>
+                        <li><a href="CourseCheck.html">查看课程</a></li>
+                        <li><a href="editContent.html">修改内容</a></li>
+                    </ul>
+                </li>
+
+                <!--input必须得实现form-control才有样式效果-->
+                <li><a id="username"></a></li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+            <div class="text-center" id="left-content">
+                <div class="list-group">
+                    <a class="list-group-item" id="oneUpload">上传一次</a>
+
+                </div>
+                <div class="list-group">
+                    <a href="UploadCourse.html" class="list-group-item">完成并返回</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-10">
+            <h2>内容编排</h2>
+            <p>tips:请老师一次编排完成，不可修改;每句话最后用“#”代表结尾</p>
+            <strong>章节名称：</strong><p id="chapterName"></p>
+            <strong>小节名称：</strong><p id="SmallChapterName"></p>
+            <hr class="divider">
+            <div id="editor">
+                <textarea style="width: 1000px; height: 300px" id="contents"></textarea>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../js/Arrange.js"></script>
+</html>
